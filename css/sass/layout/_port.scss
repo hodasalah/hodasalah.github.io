@@ -1,0 +1,64 @@
+.project-box {
+    overflow: hidden;
+    margin: 0px 15px;
+}
+
+.item.slick-slide {
+    outline: none;
+}
+.portfolio {
+    position: relative;
+    z-index: 1;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: #2c2d32;
+        z-index: -1;
+    }
+    img {
+        max-width: 100%;
+        height: 337px;
+    }
+}
+
+.project-info {
+    margin-bottom: 30px;
+    background: #2a2a2e;
+    padding: 20px;
+    margin-top: 5px;
+    & > h3 {
+        color: $main-color-one;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    & > h5 {
+        font-size: 14px;
+        letter-spacing: 0.1px;
+        font-weight: 300;
+        margin: 0;
+        margin-left: 30px;
+        position: relative;
+        color: #ccc;
+        &:hover {
+            margin: 0;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 1px;
+            width: 20px;
+            background: #ccc;
+            left: -30px;
+        }
+        &:hover:before {
+            width: 0;
+        }
+    }
+}

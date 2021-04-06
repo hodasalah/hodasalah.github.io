@@ -1,0 +1,23 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "my personal portfolio  ",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass css/sass/style.scss css/style.css -w",
+    "compile:sass": "node-sass css/sass/style.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/bootstrap.min.css css/slick-theme.css  css/slick.css css/linearicons.css css/themify-icons.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
+    "compress:sass": "node-sass css/style.prefix.css css/style.css --output-style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "concat": "^1.0.3",
+    "node-sass": "^5.0.0",
+    "postcss": "^7.0.35",
+    "postcss-cli": "^7.1.2"
+  },
+  "dependencies": {}
+}
